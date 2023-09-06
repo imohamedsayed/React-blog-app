@@ -1,8 +1,10 @@
+import logo from "./logo.svg";
 const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <h1>Blog</h1>
+        <img src={logo} alt="" />
+        <h1>React.js Blog</h1>
       </div>
       <div className="navs">
         <ul>
@@ -10,7 +12,7 @@ const Navbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/create">Add blog</a>
+            <a href="/create">New blog</a>
           </li>
         </ul>
       </div>

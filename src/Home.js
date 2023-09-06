@@ -1,8 +1,10 @@
+import Blogs from "./Blogs";
+
 const Home = () => {
   return (
     <div className="home">
-      <h1>Welcome to the React App</h1>
-      <br />
+      <h4 style={{ color: "#777" }}>.. /Home</h4>
+      <Blogs />
     </div>
   );
 };

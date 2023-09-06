@@ -1,18 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "quicksand" sans-serif serif;
 }
+
+/*
+  --> Header
+*/
+
 nav {
   background-color: #282c34;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 40px;
+  height: 60px;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  width: 60px;
 }
 nav h1 {
-  color: white;
+  color: #fff;
 }
 nav ul {
   list-style: none;
@@ -23,6 +44,7 @@ a {
   color: #61dafb;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: 1.2rem;
 }
 a:hover {
   opacity: 0.8;
@@ -36,4 +58,43 @@ a:hover {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/*
+  --> Content 
+*/
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/*
+  --> HOME
+  heart : #f1356d
+*/
+
+/* BLOGS -> blog preview*/
+.blog-prev {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #c6c3c3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.blog-prev:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.blog-prev:hover h2 {
+  color: #61dafb;
+}
+.blog-prev h2 {
+  padding: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+.blog-prev p {
+  margin: 0;
 }
