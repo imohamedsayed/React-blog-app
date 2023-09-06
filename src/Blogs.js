@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Blogs = () => {
-  const [blogs, setBlogs] = useState([
+  const [blogs] = useState([
     {
       title: "Node.js",
       body: "Node.js is a run environ...",
@@ -28,7 +28,7 @@ const Blogs = () => {
       <hr />
 
       {blogs.map((blog) => (
-        <div className="blog-prev">
+        <div className="blog-prev" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>{blog.body}</p>
         </div>
