@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "Node.js",
+      "body": "Node.js is a popular runtime environment for executing JavaScript code on servers. It allows developers to build scalable and efficient web applications, leveraging a non-blocking, event-driven architecture for high performance.",
+      "author": "Ahmed",
+      "id": 1
+    },
+    {
+      "title": "React.js",
+      "body": "React is a JavaScript library for building user interfaces. Developed by Facebook, it enables developers to create interactive and dynamic web applications using a component-based architecture for efficient UI development.",
+      "author": "Ali",
+      "id": 2
+    },
+    {
+      "title": "Vue.js",
+      "body": "Vue.js is a progressive JavaScript framework for building user interfaces. It emphasizes simplicity and flexibility, making it easy to integrate into projects. Vue uses a component-based architecture for building interactive web applications.",
+      "author": "Mohamed",
+      "id": 3
+    }
+  ]
+}
