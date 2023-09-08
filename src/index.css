@@ -82,9 +82,9 @@ a:hover {
   border-bottom: 1px solid #c6c3c3;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-.blog-prev:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  }
 }
 .blog-prev:hover h2 {
   color: #61dafb;
@@ -97,4 +97,14 @@ a:hover {
 }
 .blog-prev p {
   margin: 0;
+}
+
+/*
+  --> Loading skelton
+*/
+
+.loading .blog-skelton {
+  height: 150px;
+  margin: 20px 0;
+  background: linear-gradient(#ececec, #efefefef);
 }

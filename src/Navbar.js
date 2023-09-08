@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
@@ -9,10 +10,10 @@ const Navbar = () => {
       <div className="navs">
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/create">New blog</a>
+            <Link to="/create">New blog</Link>
           </li>
         </ul>
       </div>

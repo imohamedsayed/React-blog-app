@@ -1,53 +1,9 @@
 import BlogList from "./BlogList";
-import { useState, useEffect } from "react";
-
+import Loading from "./Loading";
+import Error from "./Error";
+import useGet from "./useGet";
 const Home = () => {
-  
-  const [blogs, setBlogs] = useState([
-    {
-      title: "Node.js",
-      body: "Node.js is a run environ...",
-      author: "Ahmed",
-      id: 1,
-    },
-    {
-      title: "React.js",
-      body: "React.js is a javaScript lib...",
-      author: "Ali",
-      id: 2,
-    },
-    {
-      title: "Vue.js",
-      body: "Vue.js is a javaScript frame...",
-      author: "Mohamed",
-      id: 3,
-    },
-  ]);
-
-  const [blogs2, setBlogs2] = useState(blogs);
-
-  const search = (key) => {
-    const searchResults = blogs.filter((blog) =>
-      blog.title.toLowerCase().includes(key.toLowerCase())
-    );
-    setBlogs2(searchResults);
-  };
-
-  const deleteBlog = (id) => {
-    const filteredBlogs = blogs.filter((blog) => blog.id !== id);
-    setBlogs2(filteredBlogs);
-    setBlogs(filteredBlogs);
-  };
-
-  useEffect(() => {
-    console.log("blogs changed");
-  }, [blogs]);
-
-
-  useEffect(() => {
-    console.log("blogs2 changed");
-  }, [blogs2]);
-
+  const { data: blogs, isLoading, error } = useGet("blogs");
 
   return (
     <div className="home">
@@ -61,17 +17,19 @@ const Home = () => {
           marginTop: "40px",
         }}
       >
-        <h2>Blogs</h2>
+        <h1>Blogs</h1>
         <input
           type="search"
           name="search"
           placeholder="search by title"
           style={{ height: "30px" }}
-          onKeyUp={(e) => search(e.target.value)}
+          // onKeyUp={(e) => search(e.target.value)}
         />
       </div>
       <hr />
-      <BlogList blogs={blogs2} deleteBlog={deleteBlog} />
+      {error && <Error error={error} />}
+      {blogs && <BlogList blogs={blogs} />}
+      {isLoading && <Loading />}
     </div>
   );
 };
