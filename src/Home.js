@@ -29,7 +29,7 @@ const Home = () => {
       <hr />
       {error && <Error error={error} />}
       {blogs && <BlogList blogs={blogs} />}
-      {isLoading && <Loading />}
+      {isLoading && <Loading number={3} />}
     </div>
   );
 };

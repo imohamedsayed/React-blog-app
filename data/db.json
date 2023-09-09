@@ -17,6 +17,18 @@
       "body": "Vue.js is a progressive JavaScript framework for building user interfaces. It emphasizes simplicity and flexibility, making it easy to integrate into projects. Vue uses a component-based architecture for building interactive web applications.",
       "author": "Mohamed",
       "id": 3
+    },
+    {
+      "title": "Laravel",
+      "author": "Sayed",
+      "body": "Laravel is a popular open-source PHP web application framework. It provides a robust and elegant way to build web applications, with features like routing, ORM, authentication, and templating, making development efficient and enjoyable.",
+      "id": 4
+    },
+    {
+      "title": "Django",
+      "author": "Sayed",
+      "body": "\nDjango is a high-level Python web framework that simplifies web development by providing pre-built components and tools. It follows the Model-View-Controller (MVC) architectural pattern, promoting clean and maintainable web application development.",
+      "id": 5
     }
   ]
 }

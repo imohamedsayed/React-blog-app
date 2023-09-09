@@ -11,9 +11,11 @@ const useGet = (endPoint) => {
       .get(`http://localhost:8000/${endPoint}`)
       .then((response) => {
         if (response.status === 200) {
-          setData(response.data);
-          setError(null);
-          setLoading(false);
+          setTimeout(() => {
+            setData(response.data);
+            setError(null);
+            setLoading(false);
+          }, 500);
         } else {
           console.log(response);
           throw Error("Could not fetch the data");
@@ -23,7 +25,6 @@ const useGet = (endPoint) => {
         setError(error.message);
         setLoading(false);
       });
-
   }, [endPoint]);
   return { data, isLoading, error };
 };
